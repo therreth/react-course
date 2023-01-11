@@ -8,14 +8,21 @@ function Todo(props) {
     setModal(true);
   }
 
+  function closeHandler() {
+    setModal(false);
+  }
   return (
     <div className="card">
       <h2>{props.text}</h2>
-      <div>
+      <div className="actions">
         <button className="btn" onClick={deleteHandler}>
           Delete
         </button>
       </div>
+      {showModal ? (
+        <Modal onCancel={closeHandler} onConfirm={closeHandler} />
+      ) : null}
+      {showModal && <Backdrop onClick={closeHandler} />}
     </div>
   );
 }
