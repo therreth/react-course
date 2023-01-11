@@ -4,7 +4,7 @@ function App() {
   return (
     <div>
       <h1>My todos</h1>
-      <Todo></Todo>
+      <Todo text="Pope"></Todo>
       <Todo></Todo>
       <Todo></Todo>
     </div>
